@@ -749,7 +749,7 @@ export class ModelGenerator {
       fields,
       doc: this.target.fieldDoc(propertySchema),
       isHashable: this.target.isHashable(type),
-      isNested: propertySchema.type === "object",
+      isNested: false,
       isEnum: propertySchema.enum != null,
       isOneOf: propertySchema.oneOf != null,
       isOptional: schema.required ? !schema.required.includes(key) : true,
